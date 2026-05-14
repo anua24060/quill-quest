@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Quill Quest</title>
+
+    <!-- TAB ICON -->
+    <link
+        rel="icon"
+        type="image/png"
+        href="logo.png"
+    >
+
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <div class="stars"></div>
+
+    <div class="app">
+
+        <!-- LOGO -->
+        <div class="logo-container">
+
+            <img
+                src="logo.png"
+                alt="Quill Quest Logo"
+                class="logo"
+            >
+
+        </div>
+
+        <div class="toolbar">
+
+            <div class="tool">
+
+                <label>Session</label>
+
+                <select id="sessionDuration">
+
+                    <option value="1">1 Min</option>
+                    <option value="5">5 Min</option>
+                    <option value="10">10 Min</option>
+                    <option value="15">15 Min</option>
+
+                </select>
+
+            </div>
+
+            <div class="tool">
+
+                <label>Danger Delay</label>
+
+                <select id="dangerDelay">
+
+                    <option value="5">5 Sec</option>
+                    <option value="10">10 Sec</option>
+                    <option value="15">15 Sec</option>
+
+                </select>
+
+            </div>
+
+            <div class="tool">
+
+                <label>Ambience</label>
+
+                <select id="ambientSelect">
+
+                    <option value="none">None</option>
+                    <option value="rain">Rain</option>
+                    <option value="forest">Forest</option>
+                    <option value="cafe">Cafe</option>
+
+                </select>
+
+            </div>
+
+            <button id="startBtn">
+                Start Session
+            </button>
+
+        </div>
+
+        <div class="stats">
+
+            <div class="card">
+
+                <span>Status</span>
+
+                <h2 id="sessionStatus">
+                    Waiting
+                </h2>
+
+            </div>
+
+            <div class="card">
+
+                <span>Timer</span>
+
+                <h2 id="timerDisplay">
+                    00:00
+                </h2>
+
+            </div>
+
+            <div class="card">
+
+                <span>Words</span>
+
+                <h2 id="wordCount">
+                    0
+                </h2>
+
+            </div>
+
+        </div>
+
+        <div id="quoteBox">
+
+            Begin your writing journey...
+
+        </div>
+
+        <div
+            id="editor"
+            contenteditable="false"
+        ></div>
+
+    </div>
+
+    <audio id="alarmSound" src="alarm.mp3"></audio>
+
+    <audio id="ambientAudio" loop></audio>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
